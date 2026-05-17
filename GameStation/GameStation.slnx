@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../GameStationsClasses/GameStationsClasses.csproj" Id="6698c2a6-7c1c-4945-a049-224271bae5ac" />
   <Project Path="GameStation.csproj" />
 </Solution>

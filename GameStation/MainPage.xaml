@@ -1,12 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
              x:Class="GameStation.MainPage">
 
     <ScrollView>
         <Grid RowDefinitions="200, *"
-              ColumnDefinitions="*, *, *, *, *">
-            <Label Text="Game Station"
+              ColumnDefinitions="*, *, *">
+            <Label x:Name="TitleLabel"
+                   Text=""
                    FontSize="36"
                    FontAttributes="Bold"
                    HorizontalOptions="Fill"
@@ -14,28 +16,29 @@
                    VerticalTextAlignment="Center"
                    HorizontalTextAlignment="Center"
                    Grid.Row="0"
-                   Grid.ColumnSpan="5" 
+                   Grid.ColumnSpan="3" 
                    TextColor="DarkGoldenrod"
                    BackgroundColor="DarkSlateGrey"/>
 
             <Picker TextColor="Black"
                     HorizontalOptions="End"
                     VerticalOptions="Start"
-                    Grid.ColumnSpan="5"
+                    Grid.ColumnSpan="3"
                     Grid.Row="0"
                     Background="DarkGray"
                     x:Name="languagePicker"
                     SelectedIndexChanged="OnLanguageChange">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
-                        <x:String>Fr</x:String>
                         <x:String>En</x:String>
+                        <x:String>Fr</x:String>
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
 
 
-            <Button Text="Dles"
+            <Button x:Name="DlesButton"
+                    Text="Dles"
                     FontAttributes="Italic"
                     FontSize="30"
                     TextColor="Black"
@@ -44,7 +47,8 @@
                     HorizontalOptions="Fill"
                     BackgroundColor="Aquamarine"/>
 
-            <Button Text="Board Games"
+            <Button x:Name="BoardGamesButton"
+                    Text=""
                     FontAttributes="Italic"
                     FontSize="30"
                     TextColor="Black"
@@ -52,7 +56,8 @@
                     Grid.Column="1"
                     HorizontalOptions="Fill"
                     BackgroundColor="BlanchedAlmond"/>
-            <Button Text="Others"
+            <Button x:Name="OthersButton"
+                    Text=""
                     FontAttributes="Italic"
                     FontSize="30"
                     TextColor="Black"
@@ -60,9 +65,6 @@
                     Grid.Column="2"
                     HorizontalOptions="Fill"
                     BackgroundColor="Wheat"/>
-
-
-
         </Grid>
     </ScrollView>
 
